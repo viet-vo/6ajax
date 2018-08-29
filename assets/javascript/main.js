@@ -53,7 +53,7 @@ $("#addGif").on("click", function (event) {
 });
 
 // pause gif
-$(".gifs").on("click", function() {
+$(document.body).on("click", ".gifs", function() {
     var state = $(this).attr("data-state");
     if (state === "still") {
       $(this).attr("src", $(this).attr("data-animate"));
@@ -65,4 +65,5 @@ $(".gifs").on("click", function() {
 });
 
 $(document).on("click", ".gifBtn", displayGifCombo);
+
 renderButtons();
